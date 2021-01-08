@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>To-Do List</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <h1>To-Do List</h1>
+
+    <form name="todo" id="todo" onsubmit="return false">
+
+        <label class="formlabel" for="taskName">Task name:</label>
+        <br>
+        <input type="text" id="taskName" name="taskName"><span id="nameReminder"></span>
+        <br>
+        <br>
+
+        <span class="formlabel">Would you like to add a description?</span>
+        <input type="checkbox" name="descVisibility" id="descVisibility" onclick="toggleDescriptionField()">
+        <br>
+
+        <div id="descriptionblock">
+            <br>
+            <label for="taskDesc" class="formlabel">Description:</label>
+            <br>
+            <textarea id="taskDesc" name="taskDesc" form="todo"></textarea>
+            <br>
+        </div>
+        <br>
+        <label for="taskPriority" class="formlabel">Priority:</label>
+        <br>
+
+        <select id="taskPriority" name="taskPriority" size="1">
+            <option value="Low" selected>Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+        </select>
+        <br>
+        <br>
+        <span class="formlabel">Tags:</span><span id="tagReminder"></span>
+        <br>
+        <input type="checkbox" id="personal" class="tag" name="personal" value="Personal">
+        <label for="personal">Personal</label>
+        <br>
+        <input type="checkbox" id="work" class="tag" name="work" value="Work">
+        <label for="work">Work</label>
+        <br>
+        <input type="checkbox" id="school" class="tag" name="school" value="School">
+        <label for="school">School</label>
+        <br>
+        <br>
+
+        <input type="submit" value="Add task" onclick="validateForm()">
+    </form>
+
+    <br>
+    <table id="taskList">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Priority</th>
+                <th>Tags</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+    </table>
+</body>
+
+</html>

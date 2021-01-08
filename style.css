@@ -1,0 +1,77 @@
+body {
+	background-color: #CCDDE2;
+	width: 80%;
+	margin: auto;
+	font-family: Verdana, Geneva, sans-serif;
+	color: #3C3744;
+}
+
+h1 {
+	text-align: center;
+	border-bottom: 1px solid black;
+	padding-bottom: 10px;
+}
+
+table {
+	border-collapse: collapse;
+	width: 50%;
+}
+
+th, td {
+	text-align: left;
+	padding: 10px;
+}
+
+table, th, td {
+	background-color: white;
+	border-collapse: collapse;
+	border: 1px solid #3C3744;
+}
+
+tr:nth-child(odd) td {
+	background-color: #EDF5F7;
+}
+
+th {
+	height: 30px;
+	background-color: #A0B8BA;
+}
+
+#descriptionblock {
+	display: none;
+}
+
+textarea {
+	max-width: 95%;
+}
+
+#todo {
+	float: left;
+	background-color: white;
+	margin-top: 20px;
+	width: 30%;
+	padding: 10px;
+	border: 1px solid #3C3744;
+}
+
+#taskList {
+	float: right;
+	width: 60%;
+	margin: 0px;
+}
+
+#nameReminder {
+	color: grey;
+	margin-left: 10px;
+}
+
+#tagReminder {
+	color: grey;
+	position: relative;
+	top: 40px;
+	left: 80px;
+}
+
+.formlabel {
+	font-weight: bold;
+}
