@@ -15,9 +15,11 @@ body {
 }
 
 h1 {
+	background-color: white;
 	text-align: center;
-	border-bottom: 1px solid black;
-	padding-bottom: 10px;
+	padding: 10px;
+	box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4);
+	border-radius: 5px;
 }
 
 table {
@@ -58,9 +60,12 @@ textarea {
 
 #todo {
 	float: left;
+	width: 30%;
+}
+
+#todoform, #options {
 	background-color: white;
 	margin-top: 20px;
-	width: 30%;
 	padding: 10px;
 	box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
 	border-radius: 5px;
@@ -98,8 +103,8 @@ i:hover {
 }
 
 .optionbutton {
-	background-color: rgb(213,237,242);
-	border: 1px solid rgb(151,191,185);
+	border: 1px solid rgb(0, 0, 0);
+    border: 1px solid rgba(0, 0, 0, 0.4);
 	border-radius: 5px;
 	box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 	padding: 5px 10px 5px 10px;
