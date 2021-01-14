@@ -27,7 +27,7 @@ function validateForm() {
 
 function addTask() {
     // Finds the table with the to-do list's tasks
-    var table = document.getElementById("taskList");
+    var table = document.getElementById("taskList").getElementsByTagName("tbody")[0];
 
     // Creates an empty row on the table and adds the information submitted through the form to the table
     var row = table.insertRow(-1);
@@ -99,6 +99,14 @@ function resetForm() {
     // Resets the form fields and style changes
     document.getElementById("todo").reset();
     document.getElementById("tagReminder").innerHTML = "";
+	document.getElementById("descVisibility").checked = false;
+	toggleDescriptionField();
+}
+
+function resetList() {
+	// Empties out the body of the table containing the to-do list
+	var tbody = document.getElementById("taskList").getElementsByTagName("tbody")[0];
+	tbody.innerHTML = "";
 }
 
 function toggleDescriptionField() {

@@ -12,7 +12,8 @@
 <body>
     <h1>To-Do List</h1>
 
-    <form name="todo" id="todo" onsubmit="return false">
+<div id="todo">
+    <form name="todo" id="todoform" onsubmit="return false">
 
         <label class="formlabel" for="taskName">Task name:</label>
         <br>
@@ -55,8 +56,18 @@
         <br>
         <br>
 
-        <input type="submit" value="Add task" onclick="validateForm()">
+        <input type="submit" class="optionbutton" value="Add task" onclick="validateForm()">
+		<input type="button" class="optionbutton" value="Reset form" onclick="resetForm()">
     </form>
+	<br>
+	<hr>
+	<div id="options">
+	<label class="formlabel">Options</label>
+	<br>
+	<br><input type="button" class="optionbutton" value="Reset list" onclick="resetList()">
+	</div>
+	
+	</div>
 
     <br>
     <table id="taskList">
@@ -68,6 +79,8 @@
                 <th>Description</th>
             </tr>
         </thead>
+		<tbody>
+		</tbody>
     </table>
 </body>
 
