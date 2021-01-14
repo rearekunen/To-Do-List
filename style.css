@@ -1,7 +1,15 @@
+html {
+	height: 100%;
+}
+
 body {
-	background-color: #CCDDE2;
+	background: rgb(123,163,157);
+	background: linear-gradient(0deg, rgba(123,163,157,1) 0%, rgba(213,237,242,1) 100%);
 	width: 80%;
+	height: 100%;
 	margin: auto;
+	background-repeat: no-repeat;
+    background-attachment: fixed;
 	font-family: Verdana, Geneva, sans-serif;
 	color: #3C3744;
 }
@@ -20,21 +28,24 @@ table {
 th, td {
 	text-align: left;
 	padding: 10px;
+	box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4);
 }
 
 table, th, td {
-	background-color: white;
-	border-collapse: collapse;
-	border: 1px solid #3C3744;
+	border-collapse: separate;
+	border-spacing: 15px;
+	border-radius: 5px;
 }
 
-tr:nth-child(odd) td {
-	background-color: #EDF5F7;
-}
 
 th {
 	height: 30px;
-	background-color: #A0B8BA;
+	background-color: white;
+}
+
+td {
+	background-color: white;
+	opacity: 80%;
 }
 
 #descriptionblock {
@@ -51,7 +62,8 @@ textarea {
 	margin-top: 20px;
 	width: 30%;
 	padding: 10px;
-	border: 1px solid #3C3744;
+	box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+	border-radius: 5px;
 }
 
 #taskList {

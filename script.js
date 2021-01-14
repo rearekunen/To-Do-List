@@ -11,7 +11,7 @@ function validateForm() {
         document.getElementById("nameReminder").innerHTML = " Add a name!";
     } else if (taskName.length < 3) {
         // Checks to see if the task name is longer than two characters
-        alert("Task name is too short, please enter a longer task name.");
+        alert("Task name should be longer than two characters.");
         task.select();
         task.focus();
         document.getElementById("nameReminder").innerHTML = " Enter a longer name!";
