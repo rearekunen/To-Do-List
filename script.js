@@ -48,6 +48,53 @@ function addTask() {
     toggleDescriptionField();
 }
 
+function sortListByPriority() {
+	table = document.getElementById("taskList");
+	var needToSort = true;
+	
+	while(needToSort) {
+		needToSort = false;
+		var rows = table.rows;
+		
+		for (i = 1; i < (rows.length - 1); i++) {
+			var needToSwitch = false;
+			
+			// 
+			x = rows[i].getElementsByTagName("td")[1];
+			y = rows[i + 1].getElementsByTagName("td")[1];
+			
+			x = assignPriorityNumber(x);
+			y = assignPriorityNumber(y);
+			
+			if (x < y) {
+				needToSwitch = true;
+				break;
+			}
+		}
+		
+		if (needToSwitch) {
+			var parentNode = rows[i].parentNode;
+			parentNode.insertBefore(rows[i + 1], rows[i]);
+			needToSort = true;
+		}
+	}
+}
+
+function assignPriorityNumber(x) {
+	var priority;
+	
+	// Assigns a number based on priority, with 1 meaning lowest priority and 3 meaning highest priority
+	if (x.innerHTML == "Low") {
+		priority = 1;
+	} else if (x.innerHTML == "Medium") {
+		priority = 2;
+	} else if (x.innerHTML == "High") {
+		priority = 3;
+	}
+	
+	return priority;
+}
+
 function resetForm() {
     // Resets the form fields and style changes
     document.getElementById("todo").reset();

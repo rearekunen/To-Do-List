@@ -87,3 +87,7 @@ textarea {
 .formlabel {
 	font-weight: bold;
 }
+
+i:hover {
+	opacity: 50%;
+}
